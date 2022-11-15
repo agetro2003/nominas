@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tablas</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+
+            <h1 id="title">Kneitega</h1>
+
+            <div class="menu">
+
+                <a id="insert-empleado" href="#">Crear Empleado</a>
+                <a id="insert-concepto" href="#"> Crear Concepto</a>
+                <a id="asignar-concepto" href="#">Asignar Concepto</a>
+                <a href="#"></a>
+            </div>
+
+            <button class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+    </nav>
+
+    <div style="margin-top: 100px;"></div>
+
+
+
+    <dialog id="modal-insert-empleado" class="centrado">
+        <div class="items-center">
+            <h1 class="title-modal"> Agregue un empleado </h1>
+            <form id="formulario" class="items-center">
+
+                <label for="Nombre"> Nombres </label>
+                <input class="inputs-modal" type="text" id="Nombres" name="Nombres"
+                    placeholder="Nombres del Empleado" />
+
+                <label for="Apellidos"> Apellidos</label>
+                <input class="inputs-modal" type="text" id="Apellidos" name="Apellidos"
+                    placeholder="Apellidos del empleado" />
+
+                <label for="Cedula"> Cedula de Identidad</label>
+                <input class="inputs-modal" type="text" id="Cedula" name="Cedula" placeholder="Cedula del empleado" />
+
+                <label for="Urb"> Urbanización </label>
+                <input class="inputs-modal" type="text" id="Urbanizacion" name="Urbanización"
+                    placeholder="Urbanización donde vive" />
+
+                <label for="Urb"> Cargo del Empleado </label>
+                <select class="inputs-modal" type="select" id="cargo-empleado" name="Cargo"
+                    placeholder="Cargo del empleado">
+                    <input class="button-modal" type="submit" id="submit-empleado" name="Submit" value="Agregar" />
+
+            </form>
+            <button  class="button-close" id="close-insert-empleado"> Cerrar </button>
+        </div>
+
+    </dialog>
+
+
+
+
+    <dialog id="modal-insert-concepto" class="centrado">
+        <div class="items-center">
+            <h1 class="title-modal"> Agregue un concepto </h1>
+            <form id="form-conceptos" class="items-center">
+                <label for="Descripcion"> Descripción </label>
+                <input class="inputs-modal" type="text" id="Descripcion" name="Descripcion"
+                    placeholder="Descripción del concepto" />
+
+                <label for="Tipo"> Tipo de Concepto </label>
+                <select class="inputs-modal" name="Tipo" id="Tipo">
+                    <option value="Aporte">Aporte</option>
+                    <option value="Sancion">Sancion</option>
+                </select>
+
+                <label for="Tipo"> Porcentaje o Monto Neto </label>
+
+                <span class="sep">
+                    <label class="label-radio" for="Porcentaje">Porcentaje</label>
+                    <input class="radio-modal" type="radio" id="radio-porcentaje" name="radiox"
+                        placeholder="Porcentaje" />
+                    <label class="label-radio" for="Porcentaje">Monto Neto</label>
+                    <input class="radio-modal" type="radio" id="radio-neto" name="radiox" placeholder="Porcentaje" />
+                </span>
+
+                <div class="flex">
+                    <div class="card items-center block" id="card1">
+                        <label for="Porcentaje" style="background-color: white; margin: 15px;"> Ingrese el porcentaje
+                            del Salario </label>
+                        <input class="inputs-modal-card" type="number" id="Porcentaje" name="PorcentajeValor"
+                            placeholder="Porcentaje" />
+                        <select class="inputs-modal-card" name="Monto" id="select-salario"></select>
+                    </div>
+
+                    <div class="card items-center block" id="card2">
+                        <label for="Porcentaje" style="background-color: white; margin: 15px;"> Ingrese el monto neto
+                        </label>
+                        <input class="inputs-modal-card" type="number" id="Porcentaje" name="NetoValor"
+                            placeholder="Porcentaje" />
+                    </div>
+
+                </div>
+
+
+
+
+                <input class="button-modal" type="submit" id="submit-empleado" name="Submit" value="Agregar" />
+
+            </form> <button class="button-close" id="close-insert-concepto"> Cerrar </button>
+        </div>
+
+
+        </div>
+
+    </dialog>
+
+
+    <dialog id="modal-asignar-concepto" class="centrado">
+
+        <div class="items-center">
+            <h1 class="title-modal"> Asignar concepto a empleado </h1>
+
+            <form id="form-asignar-conceptos">
+
+                <div class="flex xd">
+                    <input class="inputs-modal-3" type="text" id="asignar_cedula" name="cedula"
+                        placeholder="Cedula del Empleado" />
+                    <div class="box">
+                        <input class="data-modal" id="data-nombre-empleado">
+                        <input class="data-modal" id="data-cedula-empleado">
+                        <input class="data-modal" id="data-cargo-empleado">
+                        <input class="data-modal" id="data-conceptos-empleado">
+                    </div>
+                </div>
+
+                <div class="flex xd">
+                    <input class="inputs-modal-3" type="text" id="asignar_concepto" name="concepto"
+                        placeholder="id del concepto" />
+                    <div class="box">
+
+                        <input class="data-modal" id="data-id-concepto">
+                        <input class="data-modal" id="data-descripcion-concepto">
+                        <input class="data-modal" id="data-tipo-concepto">
+                        <input class="data-modal" id="data-monto-concepto">
+
+                    </div>
+
+                </div>
+
+                
+                <input class="button-modal" id="rd" type="submit" value="Asignar Concepto">
+            </form>
+            
+            
+            
+            
+            <button class="button-close" id="close-asignar-concepto"> Cerrar </button>
+        </div>
+
+    </dialog>
+
+
+
+    <div class="flex" id="centerButs">
+
+        <button class="mainBut" onclick='generarTabla();'>Generar Tabla Empleados</button>
+        <button class="mainBut" onclick="generarConceptos();"> Generar Tabla Conceptos</button>
+
+
+    </div>
+    <div id="contenedor">
+
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
